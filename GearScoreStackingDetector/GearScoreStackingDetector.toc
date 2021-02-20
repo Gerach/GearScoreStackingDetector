@@ -1,0 +1,18 @@
+## Interface: 30300
+## Title: GearScore Stacking Detector
+## Notes: Addon developed to fight gs stackers in Warmane
+## Author: Gerach
+## Version: 0.1.0
+
+Modules\Common.lua
+Modules\DeathKnight.lua
+Modules\Druid.lua
+Modules\Hunter.lua
+Modules\Mage.lua
+Modules\Paladin.lua
+Modules\Priest.lua
+Modules\Rogue.lua
+Modules\Shaman.lua
+Modules\Warlock.lua
+Modules\Warrior.lua
+GearScoreStackingDetector.lua
