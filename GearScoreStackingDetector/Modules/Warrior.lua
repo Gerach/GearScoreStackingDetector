@@ -15,8 +15,9 @@ local function getGsStackedForDamage(itemLinks)
     if ( namespace.common.statsContainDefense(itemStats)
       or namespace.common.statsContainResilience(itemStats)
       or namespace.common.statsContainIntelect(itemStats)
-      or namespace.common.statsContainAgility(itemStats)
       or namespace.common.statsContainSpirit(itemStats)
+      or (namespace.common.statsContainAgility(itemStats) and not namespace.common.statsContainArp(itemStats))
+      or (namespace.common.isAnyWeapon(id) and namespace.common.statsContainAgility(itemStats))
     ) then
       gsStackedItemsCount = gsStackedItemsCount + 1
     end

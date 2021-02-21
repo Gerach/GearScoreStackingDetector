@@ -20,6 +20,13 @@ local GEAR_SLOTS = {
   ["RELIC"] = 18
 }
 
+local function isAnyWeapon(itemId)
+  if (GEAR_SLOTS.MAIN_HAND == itemId) or (GEAR_SLOTS.OFF_HAND == itemId) then
+    return true
+  end
+  return false
+end
+
 
 local function getDominantTalentTreeId()
   local dominatingTalentTree = 0
@@ -83,9 +90,31 @@ local function statsContainResilience(stats)
   return false
 end
 
+local function statsContainArp(stats)
+  if stats["ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT"] then
+    return true
+  end
+  return false
+end
+
+local function statsContainSpellPower(stats)
+  if stats["ITEM_MOD_SPELL_POWER_SHORT"] then
+    return true
+  end
+  return false
+end
+
+local function statsContainHitRating(stats)
+  if stats["ITEM_MOD_HIT_RATING_SHORT"] then
+    return true
+  end
+  return false
+end
+
 
 namespace.common = {}
 namespace.common.GEAR_SLOTS = GEAR_SLOTS
+namespace.common.isAnyWeapon = isAnyWeapon
 namespace.common.getDominantTalentTreeId = getDominantTalentTreeId
 namespace.common.statsContainStrength = statsContainStrength
 namespace.common.statsContainIntelect = statsContainIntelect
@@ -93,3 +122,6 @@ namespace.common.statsContainAgility = statsContainAgility
 namespace.common.statsContainSpirit = statsContainSpirit
 namespace.common.statsContainDefense = statsContainDefense
 namespace.common.statsContainResilience = statsContainResilience
+namespace.common.statsContainArp = statsContainArp
+namespace.common.statsContainSpellPower = statsContainSpellPower
+namespace.common.statsContainHitRating = statsContainHitRating

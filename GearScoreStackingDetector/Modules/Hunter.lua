@@ -16,6 +16,7 @@ local function getGsStackedForDamage(itemLinks)
       or namespace.common.statsContainResilience(itemStats)
       or namespace.common.statsContainStrength(itemStats)
       or namespace.common.statsContainSpirit(itemStats)
+      or namespace.common.statsContainSpellPower(itemStats)
     ) then
       gsStackedItemsCount = gsStackedItemsCount + 1
     end

@@ -2,7 +2,7 @@
 ## Title: GearScore Stacking Detector
 ## Notes: Addon developed to fight gs stackers in Warmane
 ## Author: Gerach
-## Version: 0.1.0
+## Version: 0.1.1
 
 Modules\Common.lua
 Modules\DeathKnight.lua

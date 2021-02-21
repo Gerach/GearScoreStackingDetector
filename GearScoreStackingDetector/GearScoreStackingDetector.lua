@@ -78,6 +78,10 @@ local function hookSetUnit()
   -- TODO: think of some temporary caching solution
   ClearInspectPlayer()
   
+  if (UnitLevel("mouseover") ~= 80) then
+    return
+  end
+  
   local canCompareAchievementsIndex = 1
   if (not CanInspect("mouseover")) or (not CheckInteractDistance("mouseover", canCompareAchievementsIndex)) then
     return
